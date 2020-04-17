@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service QuoteService {
+  rpc GetQuotes (QuotesRequest) returns (QuotesResponse);
+}
+
+message QuotesRequest {
+  int32 limit = 1;
+}
+
+message QuotesResponse {
+  repeated Quote quotes = 1;
+}
+
+message Quote {
+  int32 id = 1;
+  string body = 2;
+  string created_at = 3;
+  string updated_at = 4;
+}

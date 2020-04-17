@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS quotes (
+  id         SERIAL                   NOT NULL PRIMARY KEY,
+  body       TEXT                     NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT  CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT  CURRENT_TIMESTAMP
+)
+
